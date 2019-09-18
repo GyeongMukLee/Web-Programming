@@ -1,0 +1,32 @@
+.parallax {
+    /* The image used */
+    background-image: url("parallax.jpg");
+  
+    /* Set a specific height */
+    height: 500px;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-filter: blur(2px);
+}
+
+body{
+    background-color: #3b3b3b;
+    color:white;
+}
+
+h1{
+    font-weight:100;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
