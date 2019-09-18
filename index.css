@@ -1,11 +1,11 @@
 .parallax {
-    /* The image used */
+    /* 이미지 */
     background-image: url("parallax.jpg");
   
-    /* Set a specific height */
+    /* 이미지 높이 설정 */
     height: 500px;
   
-    /* Create the parallax scrolling effect */
+    /* 패럴렉스 스크롤 구현 */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
