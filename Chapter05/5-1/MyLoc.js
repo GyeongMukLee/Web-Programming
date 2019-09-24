@@ -1,4 +1,4 @@
-windows.onload = getMyLocation;
+window.onload = getMyLocation;
 
 function getMyLocation() {
     if (navigator.geolocation) {
