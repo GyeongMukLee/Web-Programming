@@ -1,0 +1,84 @@
+book{
+    display: block;
+    padding: 10px;
+    margin: 10px;
+}
+
+title{
+    display: block;
+    font-size: 170%;
+    font-weight: lighter;
+}
+
+category{
+    display: inline-block;
+    color: gray;
+}
+
+category::after{
+    content:" | ";
+}
+
+authors{
+    display: inline-block;
+    color: gray;
+}
+
+author::after{
+    content: " | ";
+}
+
+translator::after{
+    content: " | ";
+}
+
+illustrator::after{
+    content: " | ";
+}
+
+publisher::after{
+    content: " | ";
+}
+
+publisher{
+    display: inline-block;
+    color: gray;
+}
+
+release{
+    color: gray;
+}
+
+release::after{
+    content: " | ";
+}
+
+year::after{
+    content: "년";
+}
+
+month::after{
+    content:"월";
+}
+
+day::after{
+    content: "일";
+}
+
+price{
+    display:block;
+    color:crimson;
+    font-size: 120%;
+}
+
+price::after{
+    content: "원";
+}
+
+ISBN{
+    display: none;
+}
+
+size{
+    display: none;
+}
