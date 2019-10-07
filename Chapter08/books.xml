@@ -1,237 +1,58 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<root>
-    <book>
-        <title>90년생이 온다</title>
-        <category>경제/경영</category>
-        <author>
-            <author></author>
-        </author>
-        <publisher>웨일북</publisher>
-        <release>
-            <year>2018</year>
-            <month>11</month>
-            <day>16</day>
-        </release>
-        <ISBN>9791188248674</ISBN>
-        <size>
-            <width unit="mm">146</width>
-            <height unit="mm">211</height>
-            <pages>336</pages>
-            <thickness unit="mm">26</thickness>
-            <weight unit="g">444</weight>
-        </size>
-        <price unit="KRW">14000</price>
+<bookstore>
+    <book category="경제/경영">
+        <title lang="ko">90년생이 온다</title>
+        <author>웨일북</author>
+        <year>2018</year>
+        <price>14000</price>
     </book>
-
-    <book>
-        <title>베스트 셀프</title>
-        <category>자기계발</category>
-        <author>
-            <author>마이크 베이어</author>
-            <translator>강주헌</translator>
-        </author>
-        <publisher>안드로메디안</publisher>
-        <release>
-            <year>2019</year>
-            <month>9</month>
-            <day>18</day>
-        </release>
-        <ISBN>9791135444968</ISBN>
-        <size>
-            <pages>396</pages>
-            <width unit="mm">155</width>
-            <height unit="mm">225</height>
-            <thickness unit="mm">24</thickness>
-            <weight unit="g">582</weight>
-        </size>
-        <price unit="KRW">18700</price>
+    <book category="자기계발">
+        <title lang="ko">베스트 셀프</title>
+        <author>마이크 베이어</author>
+        <year>2019</year>
+        <price>18700</price>
     </book>
-
-    <book>
-        <title>지쳤거나 좋아하는 게 없거나</title>
-        <category>시/에세이</category>
-        <author>
-            <author>글배우</author>
-        </author>
-        <publisher>강한별</publisher>
-        <release>
-            <year>2019</year>
-            <month>9</month>
-            <day>4</day>
-        </release>
-        <ISBN>9791196797706</ISBN>
-        <size>
-            <pages>248</pages>
-            <width unit="mm">131</width>
-            <height unit="mm">206</height>
-            <thickness unit="mm">17</thickness>
-            <weight unit="g">299</weight>
-        </size>
-        <price unit="KRW">13500</price>
+    <book category="시/에세이">
+        <title lang="ko">지쳤거나 좋아하는 게 없거나</title>
+        <author>글배우</author>
+        <year>2019</year>
+        <price>13500</price>
     </book>
-
-    <book>
-        <title>여행의 이유</title>
-        <category>시/에세이</category>
-        <author>
-            <author>김영하</author>
-        </author>
-        <publisher>문학동네</publisher>
-        <release>
-            <year>2019</year>
-            <month>4</month>
-            <day>17</day>
-        </release>
-        <ISBN>9788954655972</ISBN>
-        <size>
-            <pages>216</pages>
-            <width unit="mm">137</width>
-            <height unit="mm">209</height>
-            <thickness unit="mm">26</thickness>
-            <weight unit="g">355</weight>
-        </size>
-        <price unit="KRW">13500</price>
+    <book category="시/에세이" cover="paperback">
+        <title lang="ko">여행의 이유</title>
+        <author>김영하</author>
+        <year>2019</year>
+        <price>13500</price>
     </book>
-
-    <book>
-        <title>2020 부의 지각변동</title>
-        <category>경제/경영</category>
-        <author>
-            <author>박종훈</author>
-        </author>
-        <publisher>21세기북스</publisher>
-        <release>
-            <year>2019</year>
-            <month>7</month>
-            <day>5</day>
-        </release>
-        <ISBN>9788950981983</ISBN>
-        <size>
-            <pages>260</pages>
-            <width unit="mm">148</width>
-            <height unit="mm">211</height>
-            <thickness unit="mm">22</thickness>
-            <weight unit="g">373</weight>
-        </size>
-        <price unit="KRW">17000</price>
+    <book category="경제/경영">
+        <title lang="ko">2020 부의 지각변동</title>
+        <author>박종훈</author>
+        <year>2019</year>
+        <price>17000</price>
     </book>
-
-    <book>
-        <title>혼자가 혼자에게</title>
-        <category>시/에세이</category>
-        <author>
-            <author>이병률</author>
-        </author>
-        <publisher>달</publisher>
-        <release>
-            <year>2019</year>
-            <month>9</month>
-            <day>19</day>
-        </release>
-        <ISBN>9791158164026</ISBN>
-        <size>
-            <pages>316</pages>
-            <width unit="mm">132</width>
-            <height unit="mm">203</height>
-            <thickness unit="mm">22</thickness>
-            <weight unit="g">514</weight>
-        </size>
-        <price unit="KRW">15500</price>
+    <book category="시/에세이">
+        <title lang="ko">혼자가 혼자에게</title>
+        <author>이병률</author>
+        <year>2019</year>
+        <price>15500</price>
     </book>
-
-    <book>
-        <title>혼자가 혼자에게</title>
-        <category>시/에세이</category>
-        <author>
-            <author>이병률</author>
-        </author>
-        <publisher>달</publisher>
-        <release>
-            <year>2019</year>
-            <month>9</month>
-            <day>19</day>
-        </release>
-        <ISBN>9791158164026</ISBN>
-        <size>
-            <pages>316</pages>
-            <width unit="mm">132</width>
-            <height unit="mm">203</height>
-            <thickness unit="mm">22</thickness>
-            <weight unit="g">514</weight>
-        </size>
-        <price unit="KRW">15500</price>
+    <book category="인문">
+        <title lang="ko">설민석의 삼국지 1</title>
+        <author>설민석</author>
+        <year>2019</year>
+        <price>22000</price>
     </book>
-
-    <book>
-        <title>설민석의 삼국지 1</title>
-        <category>인문</category>
-        <author>
-            <author>설민석</author>
-        </author>
-        <publisher>세계사</publisher>
-        <release>
-            <year>2019</year>
-            <month>7</month>
-            <day>17</day>
-        </release>
-        <ISBN>9788933870792</ISBN>
-        <size>
-            <pages>440</pages>
-            <width unit="mm">166</width>
-            <height unit="mm">235</height>
-            <thickness unit="mm">33</thickness>
-            <weight unit="g">870</weight>
-        </size>
-        <price unit="KRW">22000</price>
+    <book category="시/에세이">
+        <title lang="ko">오늘은 이만 좀 쉴게요</title>
+        <author>손힘찬</author>
+        <year>2019</year>
+        <price>13000</price>
     </book>
-
-    <book>
-        <title>오늘은 이만 좀 쉴게요</title>
-        <category>시/에세이</category>
-        <author>
-            <author>손힘찬(오가타 마리토)</author>
-            <illust>이다영</illust>
-        </author>
-        <publisher>부크럼</publisher>
-        <release>
-            <year>2019</year>
-            <month>7</month>
-            <day>26</day>
-        </release>
-        <ISBN>9791162141786</ISBN>
-        <size>
-            <pages>248</pages>
-            <width unit="mm">115</width>
-            <height unit="mm">186</height>
-            <thickness unit="mm">14</thickness>
-            <weight unit="g">259</weight>
-        </size>
-        <price unit="KRW">13000</price>
+    <book category="자기계발">
+        <title lang="ko">어떻게 살아야 할지 막막한 너에게</title>
+        <author>우쥔</author>
+        <year>2019</year>
+        <price>15500</price>
     </book>
-
-    <book>
-        <title>어떻게 살아야 할지 막막한 너에게</title>
-        <category>자기계발</category>
-        <author>
-            <author>우쥔</author>
-            <translator>이지수</translator>
-        </author>
-        <publisher>오월구일</publisher>
-        <release>
-            <year>2019</year>
-            <month>8</month>
-            <day>16</day>
-        </release>
-        <ISBN>9791196756901</ISBN>
-        <size>
-            <pages>336</pages>
-            <width unit="mm">150</width>
-            <height unit="mm">212</height>
-            <thickness unit="mm">26</thickness>
-            <weight unit="g">471</weight>
-        </size>
-        <price unit="KRW">15500</price>
-    </book>
-
-</root>
+</bookstore>
