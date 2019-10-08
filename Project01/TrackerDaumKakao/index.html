@@ -4,17 +4,26 @@
     <head>
         <meta charset="utf-8">
         <title>Tracker</title>
-        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=API_KEY"></script>
+        <script type="text/javascript"
+            src="//dapi.kakao.com/v2/maps/sdk.js?appkey=DAUMKAKAO_MAP_API_KEY&libraries=services,clusterer,drawing"></script>
         <script src="trackerDaumKakao.js"></script>
         <link rel="stylesheet" href="trackerDaumKakao.css">
     </head>
 
     <body>
-        <header>나를 추적해봐</header>
+        <header>
+            <h1>나를 추적해봐</h1>
+            <div>2018250038 이경묵</div>
+        </header>
 
         <div id="buttonSet">
             <input type="button" value="Watch Me" onclick="startButtonClick()">
             <input type="button" value="Clear" onclick="stopButtonClick()">
+        </div>
+
+        <div id="status">
+            <div id="status_working" style="display: none;">작동 중입니다</div>
+            <div id="status_stop">작동중이 아닙니다.</div>
         </div>
 
         <div id="map">

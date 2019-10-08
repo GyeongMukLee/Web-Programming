@@ -1,125 +1,50 @@
-var watchId = null;
+// 전역변수 설정 부분
+var watchID = null;
 var map = null;
-window.onload = getMyLocation;
 
-function getMyLocation() {
+
+// HTML이 로드된 후 실행될 함수
+window.onload = function () {
     if (navigator.geolocation) {
-        var watchButton = document.getElementById("watch");
-        watchButton.onclick = watchLocation;
-        var clearWatchButton = document.getElementById("clearWatch");
-        clearWatchButton.onclick = clearWatch;
-    }
-    else {
-        alert("이런, 지오로케이션이 제공되지 않네요");
-    }
-}
+        var mapContainer = document.getElementById("map");
+        var mapOption = {
+            center: new kakao.maps.LatLng(37.5, 127),
+            level: 10
+        }
 
-function displayLocation(position) {
-    var latitude = position.coords.latitude;
-    var longitude = position.coords.longitude;
-
-
-    if (map == null) {
-        showMap(position.coords);
-    }
-    else {
-        scrollMapToPosition(position.coords);
+        map = new kakao.maps.Map(mapContainer, mapOption)
+    } else {
+        alert("Geolocation이 지원되지 않는 것 같습니다.")
     }
 }
 
+function startButtonClick() {
+    watchID = navigator.geolocation.watchPosition(function (position) {
+        var lat = position.coords.latitude;
+        var lng = position.coords.longitude;
 
-function showMap(coords) {
-    var KakaoLatAndLong = new daum.maps.LatLng(coords.latitude,
-        coords.longitude);
-    var mapOptions = {
-        zoom: 10,
-        center: KakaoLatAndLong,
-        mapTypeId: daum.maps.MapTypeId.ROADMAP
-    };
-    var mapDiv = document.getElementById("map");
-    map = new daum.maps.Map(mapDiv, mapOptions);
-
-}
-
-function addMarker(map, latlong, title, content) {
-    var markerOptions = {
-        position: latlong,
-        map: map,
-        title: title,
-        clickable: true
-    };
-    var marker = new daum.maps.Marker(markerOptions);
-
-    var infoWindowOptions = {
-        content: content,
-        position: latlong
-    };
-
-    var infoWindow = new daum.maps.InfoWindow(infoWindowOptions);
-
-    daum.maps.event.addListener(marker, 'click', function () {
-        infoWindow.open(map);
+        displayMarker(lat, lng);
     });
+
+    document.getElementById("status_working").setAttribute("style", "");
+    document.getElementById("status_stop").setAttribute("style", "display: none;")
 }
 
-//from dust
-// function displayMarker(locPosition) {
-
-// 	var imageSrc = 'icon.png', 
-//     imageSize = new daum.maps.Size(64, 69),
-//     imageOption = {offset: new daum.maps.Point(27, 69)}; 
-
-//    var markerImage = new daum.maps.MarkerImage(imageSrc, imageSize, imageOption);
-
-//     var marker = new daum.maps.Marker({  
-//         map: map, 
-//         position: locPosition,
-//         image:markerImage
-//     }); 
-
-//     marker.setMap(map); 
-//     map.setCenter(locPosition);      
-// }
-
-function displayError(error) {
-    var errorTypes = {
-        0: "알려지지 않은 에러",
-        1: "사용자가 권한 거부",
-        2: "위치를 찾을 수 없음",
-        3: "요청 응답 시간 초과"
-    };
-    var errorMessage = errorTypes[error.code];
-    if (error.code == 0 || error.code == 2) {
-        errorMessage = errorMessage + " " + error.message;
+function stopButtonClick() {
+    if (watchID) {
+        navigator.geolocation.clearWatch(watchID);
+        watchID = null;
     }
-    var div = document.getElementById("location");
-    div.innerHTML = errorMessage;
-}
-// 사용자 위치를 보는 코드
-function watchLocation() {
-    watchId = navigator.geolocation.watchPosition(
-        displayLocation,
-        displayError);
+    document.getElementById("status_working").setAttribute("style", "display: none;");
+    document.getElementById("status_stop").setAttribute("style", "")
 }
 
-function scrollMapToPosition(coords) {
-    var latitude = coords.latitude;
-    var longitude = coords.longitude;
-
-    var latlong = new daum.maps.LatLng(latitude, longitude);
-    map.panTo(latlong);
-
-    // 새 마커 추가
-    addMarker(map, latlong, "Your new location", "You moved to: " +
-        latitude + ", " + longitude);
+function displayMarker(lat, lng) {
+    var markerPosition = new kakao.maps.LatLng(lat, lng);
+    var marker = new kakao.maps.Marker({
+        map: map,
+        position: markerPosition
+    });
+    marker.setMap(map);
+    map.setCenter(markerPosition);
 }
-
-function clearWatch() {
-    if (watchId) {
-        navigator.geolocation.clearWatch(watchId);
-        watchId = null;
-    }
-}
-
-
-
