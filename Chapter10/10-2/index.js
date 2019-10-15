@@ -1,5 +1,5 @@
 window.onload = function () {
-    updateSales(sales)
+    setInterval(handleRefresh, 3000);
 };
 
 function updateSales(sales) {
@@ -11,4 +11,8 @@ function updateSales(sales) {
         div.innerHTML = sale.name + " sold " + sale.sales + " gumballs";
         salesDiv.appendChild(div);
     }
+}
+
+function handleRefresh() {
+    alert("I'm alive!");
 }
