@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Look What I Draw</title>
+        <style>
+            canvas {
+                border: 1px solid black;
+            }
+        </style>
+        <script>
+            window.onload = function () {
+                var canvas = document.getElementById("tshirtCanvas");
+                var context = canvas.getContext("2d");
+                context.fillRect(10, 10, 100, 100);
+            };
+        </script>
+    </head>
+
+    <body>
+        <h1>이미지 만들기</h1>
+        <p>2018250038 이경묵</p>
+        <canvas width="600" height="200" id="tshirtCanvas"></canvas>
+    </body>
+
+</html>

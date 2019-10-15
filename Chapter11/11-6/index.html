@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Look What I Draw</title>
+        <style>
+            canvas {
+                border: 1px solid black;
+            }
+        </style>
+        <script src="tweetshirt.js"></script>
+    </head>
+
+    <body>
+        <h1>이미지 만들기</h1>
+        <p>2018250038 이경묵</p>
+        <canvas width="600" height="200" id="tshirtCanvas"></canvas>
+
+        <form>
+            <p>
+                <label for="backgroundColor">Select background color: </label>
+                <select id="backgroundColor">
+                    <option value="white" selected="selected">White</option>
+                    <option value="black">Black</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="shape">Circles or squares?</label>
+                <select id="shape">
+                    <option value="none" selected="selected">Neither</option>
+                    <option value="circles">Circles</option>
+                    <option value="squares">Squares</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="foregroundColor">Select text color:</label>
+                <select id="foregroundColor">
+                    <option value="black" selected="selected">Black</option>
+                    <option value="white">White</option>
+                </select>
+            </p>
+            <p>
+                <label for="tweets">Pick a tweet:</label>
+                <select id="tweets">
+                </select>
+            </p>
+
+            <p>
+                <input type="button" id="previewButton" value="Preview">
+            </p>
+        </form>
+        <script src="http://www.wickedlysmart.com/hfhtml5/tweetshirt/?callback=updateTweets"></script>
+    </body>
+
+</html>
