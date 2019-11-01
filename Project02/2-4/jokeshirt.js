@@ -1,6 +1,5 @@
 window.onload = function () {
-    var button = document.getElementById("previewButton");
-    button.onclick = previewHandler;
+    updatejoke();
 };
 
 function updatejoke() {
@@ -11,7 +10,7 @@ function updatejoke() {
         if (xmlhttp.status == 200) {
             var text = JSON.parse(xmlhttp.responseText);
             text = text["value"]["joke"].replace("Chuck", document.getElementById("firstname").value);
-            text = text.replace("Norris", document.getElementById("lastname").value)
+            text = text.replace("Norris", document.getElementById("lastname").value);
             document.getElementById("joke").innerHTML = text;
         }
     }

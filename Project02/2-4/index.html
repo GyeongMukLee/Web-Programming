@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Look What I Draw</title>
+        <!-- Bootstrab 4 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <!-- 커스텀 CSS, JS -->
+        <script src="jokeshirt.js"></script>
+
+
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>Jokeshirt</h1>
+            <p>2018250038 이경묵</p>
+        </div>
+
+        <div class="container">
+            <canvas width="600" height="200" style="border: 1px black solid" id="tshirtCanvas"></canvas>
+        </div>
+
+        <div class="container">
+            <p>
+                <label for="backgroundColor">Select background color: </label>
+                <select id="backgroundColor">
+                    <option value="white" selected="selected">White</option>
+                    <option value="black">Black</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="shape">Circles or squares?</label>
+                <select id="shape">
+                    <option value="none" selected="selected">Neither</option>
+                    <option value="circles">Circles</option>
+                    <option value="squares">Squares</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="foregroundColor">Select text color:</label>
+                <select id="foregroundColor">
+                    <option value="black" selected="selected">Black</option>
+                    <option value="white">White</option>
+                </select>
+            </p>
+            <p>
+                <label for="firstname">First Name: </label>
+                <input type="text" id="firstname" value="Chuck">
+
+                <label for="lastname">Last Name: </label>
+                <input type="text" id="lastname" value="Norris">
+            </p>
+            <p>
+                <div>Joke: </div>
+                <div id="joke"></div>
+            </p>
+
+            <p>
+                <button class="btn btn-primary" onclick="previewHandler()">Preview</button>
+            </p>
+        </div>
+    </body>
+
+</html>
