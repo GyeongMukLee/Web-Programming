@@ -74,7 +74,6 @@ function drawText(canvas, context) {
     selectObj = document.getElementById("joke");
     var joke = selectObj.innerHTML;
     context.font = "italic 1.2em serif";
-    context.fillText(joke, 30, 70);
 
     context.font = "bold 1em sans-serif";
     context.textAlign = "right";
