@@ -1,10 +1,11 @@
 .parallax {
     /* 이미지 */
     background-image: url("parallax.jpg");
-  
-    /* 이미지 높이 설정 */
+
+    /* 이미지 사이즈 설정 */
     height: 500px;
-  
+    margin-bottom: 10px;
+
     /* 패럴렉스 스크롤 구현 */
     background-attachment: fixed;
     background-position: center;
@@ -13,37 +14,33 @@
     -webkit-filter: blur(2px);
 }
 
-.cpt_wrapper{
-    margin: 10px;
-    display:grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(6, 300px);
-}
-
 body{
-    background-color: #3b3b3b;
-    color:white;
+    color: whitesmoke;
+    background-color: #404040;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
-h1{
-    font-weight:100;
-}
-
-h2{
+div {
     text-align: center;
+    padding: 10px;
 }
 
-ul{
-    text-align: center;
-    padding-left: 0px;
-    margin-left: 30%;
-    margin-right: 30%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+li {
     list-style: none;
 }
 
-a{
-    color: white;
-    text-decoration: none;
+ul {
+    padding-left: 0px;
+}
+
+a {
+    color: whitesmoke;
+}
+
+a:visited {
+    color: whitesmoke;
+}
+
+a:hover {
+    color: whitesmoke;
 }
