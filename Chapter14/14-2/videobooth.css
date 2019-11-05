@@ -8,7 +8,7 @@ div#booth {
 
 div#console {
 	position: relative;
-	background: url(images/videoformfactor.jpg) no-repeat top left;
+	background: url(../images/videoformfactor.jpg) no-repeat top left;
 	width: 1100px;
 	height: 981px;
 	top: 0px;
@@ -53,7 +53,7 @@ a.effect, a.control, a.videoSelection {
 
 div#effects {
 	position: absolute;
-	background: url(images/effectbuttons.png) no-repeat top left;
+	background: url(../images/effectbuttons.png) no-repeat top left;
 	top: 0px;
 	left: 0px;
 	width: 259px;
@@ -87,7 +87,7 @@ a#scifi {
 
 div#controls {
 	position: absolute;
-	background: url(images/playpausemute.png) no-repeat top left;
+	background: url(../images/playpausemute.png) no-repeat top left;
 	top: 0px;
 	left: 350px;
 	width: 259px;
@@ -119,7 +119,7 @@ a#mute {
 
 div#videoSelection {
 	position: absolute;
-	background: url(images/video1video2buttons.png) no-repeat top left;
+	background: url(../images/video1video2buttons.png) no-repeat top left;
 	top: 0px;
 	left: 700px;
 	width: 137px;

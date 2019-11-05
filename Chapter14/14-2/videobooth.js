@@ -5,12 +5,12 @@ var videos = {
 
 window.onload = function () {
     var video = document.getElementById("video");
-    video.src = videos.video1 + getFormatExtension();
+    video.src = "../video/demovideo1" + getFormatExtension();
     video.load();
 
     var controlLinks = document.querySelectorAll("a.control");
     for (var i = 0; i < controlLinks.length; i++) {
-        effectLinks[i].onclick = handleControl;
+        controlLinks[i].onclick = handleControl;
     }
 
     var effectLinks = document.querySelectorAll("a.effect");
@@ -120,4 +120,14 @@ function isButtonPushed(id) {
 
 function endedHandler() {
     pushUnpushButtons("", ["play"]);
+}
+
+function getFormatExtension() {
+    if (video.canPlayType("video/mp4") != "") {
+        return ".mp4"
+    } else if (video.canPlayType("video/webm") != "") {
+        return ".webm"
+    } else if (video.canPlayType("video/ogg") != "") {
+        return ".ogv"
+    }
 }

@@ -53,10 +53,10 @@ a.effect, a.control, a.videoSelection {
 
 div#effects {
 	position: absolute;
-	background: url(../images/effectbuttons.png) no-repeat top left;
+	background: url(../images/effectbuttons_4.png) no-repeat top left;
 	top: 0px;
 	left: 0px;
-	width: 259px;
+	width: 340px;
 	height: 56px;
 }
 
@@ -83,6 +83,12 @@ a#scifi {
 	position: absolute;
 	top: 0px;
 	left: 194px;
+}
+
+a#bwcartoon {
+	position: absolute;
+	top: 0px;
+	left: 260px;
 }
 
 div#controls {
