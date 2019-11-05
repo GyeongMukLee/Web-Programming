@@ -1,6 +1,6 @@
 var videos = {
-    video1: "video/demovideo1",
-    video2: "video/demovideo2"
+    video1: "../video/demovideo1",
+    video2: "../video/demovideo2"
 };
 
 window.onload = function () {
@@ -88,7 +88,7 @@ function pushUnpushButtons(idToPush, idArrayToUnpush) {
         if (!theClass.indexOf("selected") >= 0) {
             theClass = theClass + " selected";
             anchor.setAttribute("class", theClass);
-            var newImage = "url(images/" + idToPush + "pressed.png";
+            var newImage = "url(../images/" + idToPush + "pressed.png)";
             anchor.style.backgroundImage = newImage;
         }
     }
