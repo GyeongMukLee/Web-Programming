@@ -1,10 +1,19 @@
 <?php
 
-    mysqli_connect("localhost", "vallisneria", "mm9208036!", "runners")
-                OR die(fail("Could not connect to database"));
+    $query = "SELECT first_name, last_name, gender, finish_time FROM runners order by finish_time _ASC";
 
-    mysqli_select_db("vallisneria");
+    $result = db_connection($query);
 
-    echo "Connected!";
+    while ($row = mysql_fetch_array($result, MYSQL_ASSOC)){
+        print_f($row);
+    }
 
+    function db_connection($query){
+        mysqli_connect("localhost", "vallisneria", "YOUR_PASSWORD", "vallisneria")
+        OR die("could not connect to database.");
+
+        mysql_select_db("hrjq_race_info");
+
+        return mysql_query($query);
+    }
 ?>
