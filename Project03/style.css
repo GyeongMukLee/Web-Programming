@@ -11,3 +11,9 @@ a:visited {
     color: gray;
     text-decoration: none;
 }
+
+@media (max-width: 768px) {
+    .mobile-not-allow {
+        display: none;
+    }
+}

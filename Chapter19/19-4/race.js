@@ -1,5 +1,17 @@
 $(document).ready(function () {
 
+    var FREQ = 10000;
+
+    function startAJAXcalls() {
+
+        setTimeout(function () {
+                getXMLRacers();
+                startAJAXcalls();
+            },
+            FREQ
+        );
+    }
+
     function getXMLRacers() {
         $.ajax({
             url: "finishers.xml",
@@ -27,9 +39,6 @@ $(document).ready(function () {
         });
     }
 
-    getXMLRacers();
-
-
     function getTime() {
         var a_p = "";
         var d = new Date();
@@ -51,4 +60,9 @@ $(document).ready(function () {
 
         $('#updatedTime').html(curr_hour + ":" + curr_min + ":" + curr_sec + " " + a_p);
     }
+
+
+    getXMLRacers();
+    startAJAXcalls();
+
 });

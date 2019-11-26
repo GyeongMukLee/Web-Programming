@@ -11,9 +11,9 @@ $(document).ready(function () {
 
         if (repeat) {
             setTimeout(function () {
-                    getXMLRacers();
-                    startAJAXcalls();
-                },
+                getXMLRacers();
+                startAJAXcalls();
+            },
                 FREQ
             );
         }
@@ -36,8 +36,7 @@ $(document).ready(function () {
                         $('#finishers_m').append(info);
                     } else if ($(this).find("gender").text() == "f") {
                         $('#finishers_f').append(info);
-                    } else {
-                    }
+                    } else { }
                     $('#finishers_all').append(info);
                 });
 
@@ -47,17 +46,14 @@ $(document).ready(function () {
     }
 
     function getTimeAjax() {
-        $('#updatedTime').load("time.php");
-        /*
         var time = "";
         $.ajax({
             url: "time.php",
             cache: false,
-            success: function(data){
+            success: function (data) {
                 $('#updatedTime').html(data);
             }
         });
-        */
     }
 
     $("#btnStop").click(function () {

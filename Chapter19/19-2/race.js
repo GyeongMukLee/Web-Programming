@@ -1,4 +1,11 @@
 $(document).ready(function () {
+    $.ajax({
+        url: "finishers.xml",
+        cache: false,
+        dataType: "xml",
+        success: function (xml) {
+        }
+    });
 
     getTime();
 
