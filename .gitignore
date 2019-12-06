@@ -4,3 +4,5 @@
 
 # 환경변수
 *.env
+
+node_modules/

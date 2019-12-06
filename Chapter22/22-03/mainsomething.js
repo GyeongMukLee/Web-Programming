@@ -1,2 +1,2 @@
-const doSomething = require("./doSomething.js").default;
+const doSomething = require("./03_doSomething.js").default;
 doSomething();
